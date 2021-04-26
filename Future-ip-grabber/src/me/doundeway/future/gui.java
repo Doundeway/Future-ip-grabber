@@ -18,9 +18,10 @@ public class gui extends JFrame{
 	String home = System.getProperty("user.home");
 	String FinalHome = home + "\\Desktop\\";
 	
-	ImageIcon img =  new ImageIcon(getClass().getClassLoader().getResource("C:\\Users\\MSI\\Desktop\\programiren\\Future2\\logo.png"));
-	ImageIcon img2 =  new ImageIcon(getClass().getClassLoader().getResource("C:\\Users\\MSI\\Desktop\\programiren\\Future2\\logo2.png"));
-	ImageIcon img3 =  new ImageIcon(getClass().getClassLoader().getResource("C:\\Users\\MSI\\Desktop\\programiren\\Future2\\download.png"));
+	ImageIcon img =  new ImageIcon(getClass().getClassLoader().getResource("logo.png"));
+
+	ImageIcon img2 =  new ImageIcon(getClass().getClassLoader().getResource("logo2.png"));
+	ImageIcon img3 =  new ImageIcon(getClass().getClassLoader().getResource("download.png"));
 	public final JPanel p = new JPanel();
 	
 	
@@ -72,4 +73,3 @@ public class gui extends JFrame{
 		}
       
 }
-
