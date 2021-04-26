@@ -4,7 +4,7 @@
 </p>
 
 
-<h1 align="center">💫 Future client ip grabber 💫</h1>
+<h1 align="center">🔧 Future client ip grabber 🔧 </h1>
 <h3 align="center">If someone wants Future client for free, send them this, it has the same GUI as Future installer. Grabs victims IPv6 address and sends it through a discord webhook.
 </h3>
 <h4 align="center">⭐ Don't forget to leave a star! ⭐</h4>
