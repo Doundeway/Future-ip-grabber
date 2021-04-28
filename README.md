@@ -1,6 +1,5 @@
 <p align="center">
   <a href="http://forthebadge.com/"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" alt="forthebadge"/></a>
-  <a href="http://forthebadge.com/"><img src="https://forthebadge.com/images/badges/mom-made-pizza-rolls.svg" alt="forthebadge"/></a>
 </p>
 
 
