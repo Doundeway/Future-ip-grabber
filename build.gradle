@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    id = 'ImpactInstaller'
+    group 'io.github.ImpactDevelopment'
+    version '0.9.4'
+    description = 'Future'
+    mainClassName = 'me.doundeway.future.Main'
+    targetCompatibility = sourceCompatibility = JavaVersion.VERSION_1_8
+}
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+version = "1.0.1"
+
+jar {
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+    manifest {
+
+        attributes 'Main-Class': 'me.doundeway.future.Main'
+    }
+}
